@@ -11,7 +11,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SocialNetworksComponent } from './components/header/social-networks/social-networks.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './services/interceptor.service';
+import { PortfolioService } from './services/portfolio.service';
+import { PersonalDataComponent } from './components/personal-data/personal-data.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { EducationComponent } from './components/education/education.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,10 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     ButtonComponent,
     SocialNetworksComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    PersonalDataComponent,
+    ExperienceComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PortfolioService,
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

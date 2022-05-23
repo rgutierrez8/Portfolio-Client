@@ -16,10 +16,15 @@ export class AuthService {
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'))
   }
   
-  iniciarSesion(credencials: any): Observable<any>{
+  login(credencials: any): Observable<any>{
     return this.http.post(this.url, credencials).pipe(map(data => {
       sessionStorage.setItem('currentUser', JSON.stringify(data));
+      this.currentUserSubject.next(data);
       return data;
     }));
+  }
+
+  get AuthUser() {
+    return this.currentUserSubject.value;
   }
 }

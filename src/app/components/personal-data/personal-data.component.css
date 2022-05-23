@@ -1,0 +1,55 @@
+.personal-data{
+    background: rgb(197, 197, 197);
+    margin: 10px 30px;
+    height: 500px;
+    border-radius: 25px;
+    overflow: hidden;
+    color: black;
+}
+
+.banner{
+    object-fit: cover;
+    width: 100%;
+    max-height: 50%;
+}
+
+.profile-photo{
+    position: relative;
+    top: -110px;
+    left: 30px;
+    border-radius: 50%;
+}
+
+.info{
+    position: relative;
+    top: -90px;
+    left: 30px; 
+}
+p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.other-info{
+    display: inline-block;
+    position: relative;
+    bottom: 100px;
+    left: 70%;
+    width: 350px;
+}
+.other-info img{
+    width: 70px;
+}
+
+.btn-edit{
+    position: relative;
+    bottom: 260px;
+    left: 90%;
+}
+
+a{
+    color: black;
+}
+a:hover{
+    color:forestgreen;
+}

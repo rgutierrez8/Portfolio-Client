@@ -1,0 +1,57 @@
+.education{
+    background: rgb(197, 197, 197);
+    margin: 10px 30px;
+    padding: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+    color: black;
+}
+
+h3{
+    margin: 30px;
+    display: inline-block;
+}
+a{
+    color: black
+}
+a:hover{
+    color: forestgreen;
+}
+
+
+.card-experience{
+    background: rgb(156, 156, 156);
+    margin: 10px auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 15px;
+}
+
+.card-experience img{
+    display: inline-block;
+    width: 150px;
+    max-width: 30%;
+}
+
+.experience-description{
+    display: inline-block;
+    margin: 30px;
+    width: 70%;
+    vertical-align: middle;
+}
+
+.experience-description p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.experience-description span{
+    font-size: 20px;
+    font-weight: 700;
+}
+.description{
+    font-weight: 700;
+}
+
+.btn-edit, .btn-add{
+    float: right;
+}
