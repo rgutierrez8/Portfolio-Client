@@ -33,7 +33,6 @@ export class LoginFormComponent implements OnInit {
   onSubmit(event: Event) {
     event.preventDefault;
     this.auth.iniciarSesion(this.form.value).subscribe(data => {
-      console.log("DATA: " + data.text);
       this.route.navigate(['/portfolio']);
     })
   }
