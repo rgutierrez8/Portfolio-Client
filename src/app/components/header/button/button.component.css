@@ -1,0 +1,12 @@
+button{
+    margin: 0 10px;
+}
+
+div, .modal-header{
+    color: black;
+}
+
+.errorLabel{
+    font-weight: 700;
+    color: red;
+}
