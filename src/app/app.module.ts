@@ -8,13 +8,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/header/button/button.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SocialNetworksComponent } from './components/header/social-networks/social-networks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PortfolioComponent,
     HeaderComponent,
-    ButtonComponent
+    ButtonComponent,
+    SocialNetworksComponent
   ],
   imports: [
     BrowserModule,

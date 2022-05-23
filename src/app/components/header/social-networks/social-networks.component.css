@@ -1,0 +1,20 @@
+.social-networks{
+    display: inline-block;
+    margin: 0 25px;
+}
+
+a{
+    display: inline-block;
+    margin: 10px;
+    font-size: 30px;
+    color: white;
+}
+.facebook:hover{
+    color: rgb(49, 148, 187);
+}
+.linkedin:hover{
+    color: rgb(8, 136, 187);
+}
+.github:hover{
+    color: rgb(182, 181, 181);
+}

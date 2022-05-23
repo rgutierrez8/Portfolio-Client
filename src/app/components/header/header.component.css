@@ -1,0 +1,15 @@
+header{
+    margin: 10px auto;
+    padding: 20px;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.right-side{
+    float: right;
+    margin-top: 15px;
+}
+
+img{
+    width: 150px;
+}
