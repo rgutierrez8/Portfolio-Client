@@ -1,1 +1,33 @@
-<p>login-form works!</p>
+
+<div class="login-form">
+    <h1>Iniciar sesión</h1>
+    <form [formGroup]="form" class="m-5 col-lg-7" (ngSubmit)="onSubmit($event)">
+        <div class="m-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="username" formControlName="username" class="form-control" id="username"
+            [ngClass]="{'is-invalid': Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
+            <div *ngIf="Username?.errors && Username?.touched">
+                <p *ngIf="Username?.hasError('required')" class="text-danger">
+                    El email es requerido
+                </p>
+                <p *ngIf="Username?.hasError('email')" class="text-danger">
+                    El formato del email es incorrecto
+                </p>
+            </div>
+        </div>
+        <div class="m-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" formControlName="password" class="form-control" id="password"
+            [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
+            <div *ngIf="Password?.errors && Password?.touched">
+                <p *ngIf="Password?.hasError('required')" class="text-danger">
+                    La contraseña es requerida
+                </p>
+                <p *ngIf="Password?.hasError('minlength')" class="text-danger">
+                    El formato del email es incorrecto
+                </p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+    </form>
+</div>

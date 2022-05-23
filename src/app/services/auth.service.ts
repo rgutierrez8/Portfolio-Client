@@ -8,12 +8,12 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  url = '';
+  url = 'http://localhost:8080/auth/login';
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http: HttpClient) {
     console.log("El servicio de auth está ejecutandose");
-    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
+    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'))
   }
   
   iniciarSesion(credencials: any): Observable<any>{
