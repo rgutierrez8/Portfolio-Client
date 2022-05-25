@@ -1,16 +1,11 @@
 <div class="skills">
-    <div class="skill-card">
-        <div class="skill-card-circle">
-            <div class="circle">
-                <div class="mask half">
-                    <div class="fill" id="fill"></div>
-                </div>
-                <div class="mask full" id="fill2">
-                    <div class="fill"></div>
-                 </div>
-            </div>
-            <div class="average" id="average">95%</div>
+    <div class="title">
+        <h3>Skills</h3>
+        <button class="btn-add"><fa-icon [icon]="faPlus"></fa-icon></button>
+    </div>
+    <div class="cards">
+        <div *ngFor="let skill of skills" class="skill-card" id="skill-card">
+            <app-skill-card [skill]="skill" [skills]="skills"></app-skill-card>
         </div>
-        <div class="skill-name">HTML5</div>
     </div>
 </div>

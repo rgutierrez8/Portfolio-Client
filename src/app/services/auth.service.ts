@@ -12,7 +12,6 @@ export class AuthService {
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http: HttpClient) {
-    console.log("El servicio de auth está ejecutandose");
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'))
   }
   

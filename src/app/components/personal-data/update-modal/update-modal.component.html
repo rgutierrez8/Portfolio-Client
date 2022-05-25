@@ -1,0 +1,94 @@
+<ng-template #updateModal let-modal>
+    <form [formGroup]="form" class="form-update" (ngSubmit)="onSubmit($event)">
+        <div class="m-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" formControlName="name" class="form-control" id="name"
+            [ngClass]="{'is-invalid': Name?.errors && Name?.touched, 'is-valid': !Name?.errors && Name?.touched}">
+            <div *ngIf="Name?.errors && Name?.touched">
+                <p *ngIf="Name?.hasError('required')" class="text-danger">
+                    El nombre es requerido
+                </p>
+            </div>
+        </div>
+        <div class="m-3">
+            <label for="lastName" class="form-label">Apellido</label>
+            <input type="text" formControlName="lastName" class="form-control" id="lastName"
+            [ngClass]="{'is-invalid': lastname?.errors && lastname?.touched, 'is-valid': !lastname?.errors && lastname?.touched}">
+            <div *ngIf="lastname?.errors && lastname?.touched">
+                <p *ngIf="lastname?.hasError('required')" class="text-danger">
+                    El apellido es requerido
+                </p>
+            </div>
+        </div>
+        <div class="m-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control" id="email"
+            [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
+            <div *ngIf="Email?.errors && Email?.touched">
+                <p *ngIf="Email?.hasError('required')" class="text-danger">
+                    El email es requerido
+                </p>
+                <p *ngIf="Email?.hasError('email')" class="text-danger">
+                    El formato del email es incorrecto
+                </p>
+            </div>
+        </div>
+        <div class="m-3">
+            <label for="username" class="form-label">Usuario</label>
+            <input type="text" formControlName="username" class="form-control" id="username"
+            [ngClass]="{'is-invalid': Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
+            <div *ngIf="Username?.errors && Username?.touched">
+                <p *ngIf="Username?.hasError('required')" class="text-danger">
+                    El nombre de usurio es requerido
+                </p>
+            </div>
+        </div>
+        <div class="m-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" formControlName="password" class="form-control" id="password"
+            [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
+            <div *ngIf="Password?.errors && Password?.touched">
+                <p *ngIf="Password?.hasError('required')" class="text-danger">
+                    La contraseña es requerida
+                </p>
+                <p *ngIf="Password?.hasError('minlength')" class="text-danger">
+                    El formato de la contraseña es incorrecto
+                </p>
+            </div>
+        </div>
+        <div class="m-3">
+            <label for="phone" class="form-label">Teléfono</label>
+            <input type="text" formControlName="phone" class="form-control" id="phone"
+            [ngClass]="{'is-invalid': Phone?.errors && Phone?.touched, 'is-valid': !Phone?.errors && Phone?.touched}">
+        </div>
+        <div class="m-3">
+            <label for="title" class="form-label">Título</label>
+            <input type="text" formControlName="title" class="form-control" id="title"
+            [ngClass]="{'is-invalid': Title?.errors && Title?.touched, 'is-valid': !Title?.errors && Title?.touched}">
+        </div>
+        <div class="m-3">
+            <label for="description" class="form-label">Descripción</label>
+            <input type="text" formControlName="description" class="form-control" id="description"
+            [ngClass]="{'is-invalid': Description?.errors && Description?.touched, 'is-valid': !Description?.errors && Description?.touched}">
+        </div>
+        <div class="m-3">
+            <label for="address" class="form-label">Ciudad - Provincia</label>
+            <input type="text" formControlName="address" class="form-control" id="address"
+            [ngClass]="{'is-invalid': Address?.errors && Address?.touched, 'is-valid': !Address?.errors && Address?.touched}">
+        </div>
+        <div class="m-3">
+            <label for="urlImg" class="form-label">Url Imágen</label>
+            <input type="text" formControlName="urlImg" class="form-control" id="urlImg"
+            [ngClass]="{'is-invalid': urlImg?.errors && urlImg?.touched, 'is-valid': !urlImg?.errors && urlImg?.touched}">
+        </div>
+        <div class="m-3">
+            <label for="banner" class="form-label">Url Banner</label>
+            <input type="text" formControlName="banner" class="form-control" id="banner"
+            [ngClass]="{'is-invalid': Banner?.errors && Banner?.touched, 'is-valid': !Banner?.errors && Banner?.touched}">
+        </div>
+        <div class="buttons">
+            <button type="close" class="btn btn-danger" (click)="modal.close()">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
+    </form>
+</ng-template>

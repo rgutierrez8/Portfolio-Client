@@ -1,0 +1,27 @@
+.education-description{
+    display: inline-block;
+    margin: 30px;
+    width: 70%;
+    vertical-align: middle;
+}
+
+.education-description p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.education-description span{
+    font-size: 20px;
+    font-weight: 700;
+}
+.description{
+    font-weight: 700;
+}
+
+.btn-edit{
+    border: none;
+    background: none;
+    float: right;
+}
+.btn-edit:hover{
+    color: rgb(33, 219, 33);
+}

@@ -3,20 +3,21 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
-  selector: 'app-education',
-  templateUrl: './education.component.html',
-  styleUrls: ['./education.component.css']
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.css']
 })
-export class EducationComponent implements OnInit {
+export class ProjectsComponent implements OnInit {
 
   faPlus = faPlus;
-  education: any;
+
+  projects: any = [];
 
   constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
-    this.portfolioService.getEducation().subscribe(data => {
-      this.education = data;
+    this.portfolioService.getProjects().subscribe(data => {
+      this.projects = data;
     })
   }
 

@@ -11,40 +11,33 @@ h3{
     margin: 30px;
     display: inline-block;
 }
-a{
-    color: black
-}
-a:hover{
-    color: forestgreen;
-}
 
-
-.card-experience{
+.card-education{
     background: rgb(156, 156, 156);
-    margin: 10px auto;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 30px;
     width: 60%;
     border-radius: 15px;
 }
 
-.card-experience img{
+.card-education img{
     display: inline-block;
     width: 150px;
     max-width: 30%;
 }
 
-.experience-description{
+.education-description{
     display: inline-block;
     margin: 30px;
     width: 70%;
     vertical-align: middle;
 }
 
-.experience-description p{
+.education-description p{
     font-size: 16px;
     font-weight: 500;
 }
-.experience-description span{
+.education-description span{
     font-size: 20px;
     font-weight: 700;
 }
@@ -52,6 +45,11 @@ a:hover{
     font-weight: 700;
 }
 
-.btn-edit, .btn-add{
+.btn-add{
+    border: none;
+    background: none;
     float: right;
+}
+.btn-add:hover{
+    color: rgb(1, 109, 250);
 }

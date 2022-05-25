@@ -2,78 +2,35 @@
     --var-degree: 0deg;
 }
 
+h3{
+  margin: 30px;
+  display: inline-block;
+}
+
+.btn-add{
+  float: right;
+  border: none;
+  background: none;
+}
+.btn-add:hover{
+  color: rgb(1, 109, 250);
+}
+
 .skills{
     background: rgb(197, 197, 197);
-    margin: 10px 30px;
-    padding: 20px;
+    margin: 20px 30px;
+    padding: 30px;
     border-radius: 25px;
     overflow: hidden;
     color: black;
 }
 
+.cards{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
 .skill-card{
-    display: inline-block;
     width: 200px;
+    margin: 30px auto;
 }
-.skill-card-circle{
-    margin: 20px auto;
-    width: 150px;
-    height: 150px;
-    background: rgb(168, 167, 167);
-    border-radius: 50%;
-    border: 1px solid #cdcbd0;
-}
-
-.skill-card .circle .mask,
-.skill-card .circle .fill {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.mask .fill {
-  clip: rect(0px, 75px, 150px, 0px);
-  background-color: #16d830;
-}
-
-.skill-card .circle .mask {
-    clip: rect(0px, 150px, 150px, 75px);
-  }
-  
-  .mask.full,
-  .circle .fill {
-    animation: fill ease-in-out 3s;
-    transform: rotate(var(--var-degree));
-  }
-  
-  @keyframes fill{
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(var(--var-degree));
-    }
-  }
-
-  .average{
-    width: 122px;
-    height: 122px;
-    border-radius: 50%;
-    background: rgb(197, 197, 197);
-    line-height: 120px;
-    text-align: center;
-    margin-top: 14px;
-    margin-left: 14px;
-    color: black;
-    position: absolute;
-    z-index: 100;
-    font-weight: 700;
-    font-size: 2em
-  }
-  .skill-name{
-      vertical-align: baseline;
-      text-align: center;
-      font-weight: 700;
-      font-size: 20px;
-  }

@@ -3,12 +3,7 @@
         <h3>Experiencia</h3>
         <a href="#" class="btn-add"><fa-icon [icon]="faPlus"></fa-icon></a>
     </div>
-    <div class="card-job">
-        <img src="https://argentina.practia.global/wp-content/uploads/2021/01/logo-practia-original.svg">
-        <div class="job-description">
-            <a href="#" class="btn-edit"><fa-icon [icon]="faPen"></fa-icon></a>
-            <p><span>Practia Global</span> (2021 - Actualidad)</p>
-            <p class="description">.Net developer</p>
-        </div>
+    <div *ngFor="let job of experience" class="card-job">
+        <app-experience-card [job]="job"></app-experience-card>
     </div>
 </div>

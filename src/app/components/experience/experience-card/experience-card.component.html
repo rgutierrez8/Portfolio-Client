@@ -1,0 +1,7 @@
+<a href="#" class="btn-edit"><fa-icon [icon]="faPen"></fa-icon></a>
+<img *ngIf="job.urlImg !== null" [src]="job.urlImg">
+<!--<img *ngIf="job.urlImg === null || job.urlImg == ''" src="../../../assets/images/developer.png">-->
+    <div class="job-description">
+        <p><span>{{job.company}}</span> ({{job.dateStart}} - {{job.dateEnd}})</p>
+        <p class="description">{{job.description}}</p>
+    </div>

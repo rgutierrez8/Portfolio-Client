@@ -18,6 +18,12 @@ import { PersonalDataComponent } from './components/personal-data/personal-data.
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { UpdateModalComponent } from './components/personal-data/update-modal/update-modal.component';
+import { EducationCardComponent } from './components/education/education-card/education-card.component';
+import { ExperienceCardComponent } from './components/experience/experience-card/experience-card.component';
+import { SkillCardComponent } from './components/skills/skill-card/skill-card.component';
+import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { SkillsComponent } from './components/skills/skills.component';
     PersonalDataComponent,
     ExperienceComponent,
     EducationComponent,
-    SkillsComponent
+    SkillsComponent,
+    ProjectsComponent,
+    UpdateModalComponent,
+    EducationCardComponent,
+    ExperienceCardComponent,
+    SkillCardComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +50,7 @@ import { SkillsComponent } from './components/skills/skills.component';
     FontAwesomeModule,
     NgbModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [PortfolioService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],

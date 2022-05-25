@@ -1,0 +1,6 @@
+<img *ngIf="ed.urlImg !== null" [src]="ed.urlImg">
+    <button class="btn-edit"><fa-icon [icon]="faPen"></fa-icon></button>
+    <div class="education-description">
+        <p><span>{{ed.institution}}</span> ({{ed.dateEnd}})</p>
+        <p class="description">{{ed.description}}</p>
+    </div>

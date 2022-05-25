@@ -17,11 +17,10 @@ export class InterceptorService {
     if (currentUser && currentUser.accessToken) {
       req = req.clone({
         setHeaders: {
-          Authorization: `Bearer ${currentUser.accessToken}`
+          Authorization: currentUser.accessToken,
         }
       });
     }
-    console.log("Interceptor: ", JSON.stringify(currentUser));
     return next.handle(req);
   }
 }

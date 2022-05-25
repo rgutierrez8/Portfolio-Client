@@ -45,11 +45,9 @@ p{
     position: relative;
     bottom: 260px;
     left: 90%;
+    border: none;
+    background: none;
 }
-
-a{
-    color: black;
-}
-a:hover{
-    color:forestgreen;
+.btn-edit:hover{
+    color: rgb(33, 219, 33);
 }

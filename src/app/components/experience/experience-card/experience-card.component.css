@@ -1,0 +1,33 @@
+img{
+    display: inline-block;
+    width: 150px;
+}
+
+.job-description{
+    display: inline-block;
+    margin: 30px;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.job-description p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.job-description span{
+    font-size: 20px;
+    font-weight: 700;
+}
+.description{
+    font-weight: 700;
+}
+
+.btn-edit{
+    float: right;
+    border: none;
+    background: none;
+    color: black;
+}
+.btn-edit:hover{
+    color: rgb(33, 219, 33);
+}

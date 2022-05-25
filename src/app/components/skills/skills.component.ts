@@ -1,25 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { faChrome } from '@fortawesome/free-brands-svg-icons';
+import { faPencil, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-  
+
 export class SkillsComponent implements OnInit {
 
-  constructor() { 
-    let averageText = document.getElementById("average")?.textContent?.split("%")[0];
-    const average = (Number(averageText) * 180) / 100;
-    document.getElementById("fill")?.style.setProperty("--var-degree", `${average}deg`);
-    document.getElementById("fill2")?.style.setProperty("--var-degree", `${average}deg`);
-  }
+  faPlus = faPlus;
+  faPencil = faPencil;
+  skills: any = [];
+
+  
+  constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
-    let averageText = document.getElementById("average")?.textContent?.split("%")[0];
-    const average = (Number(averageText) * 180) / 100;
-    document.getElementById("fill")?.style.setProperty("--var-degree", `${average}deg`);
-    document.getElementById("fill2")?.style.setProperty("--var-degree", `${average}deg`);
+    this.portfolioService.getSkills().subscribe(data => {
+      this.skills = data;
+    })
   }
-
 }

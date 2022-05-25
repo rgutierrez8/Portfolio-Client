@@ -1,0 +1,17 @@
+.modal-content{
+    width: 100%;
+}
+
+.form-update{
+    color: black;
+    padding: 30px;
+    width: 100%;
+}
+
+.buttons{
+    margin: 10px auto;
+    text-align: center;
+}
+.buttons button{
+    margin: 10px;
+}

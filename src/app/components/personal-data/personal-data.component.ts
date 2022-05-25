@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { PortfolioService } from 'src/app/services/portfolio.service';
+
 
 @Component({
   selector: 'app-personal-data',
@@ -8,13 +10,20 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 })
 export class PersonalDataComponent implements OnInit {
 
-  banner: String = "https://idimad360.com/wp-content/uploads/2021/08/Inteligencia-Artificial-Programadores-del-futuro-Idimad-360.jpg";
   practiaLogo: String = "https://argentina.practia.global/wp-content/uploads/2021/01/logo-practia-original.svg";
   faPen = faPen;
+  personalData: any = [];
 
-  constructor() { }
+  constructor(private portfolioService: PortfolioService) {
+   }
 
   ngOnInit(): void {
+    this.portfolioService.getPersonalData().subscribe(data => {
+      this.personalData = data;
+    })
   }
 
+  refreshData(data: any) {
+    this.personalData = data;
+  }
 }
