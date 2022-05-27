@@ -1,6 +1,14 @@
-img{
+.company-logo{
+    margin: auto 10px;
     display: inline-block;
     width: 150px;
+    max-height: 220px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+img{
+    width: 100%;
+    object-fit: contain;
 }
 
 .job-description{
@@ -22,12 +30,15 @@ img{
     font-weight: 700;
 }
 
-.btn-edit{
-    float: right;
+.btn-edit, .btn-delete{
     border: none;
     background: none;
+    float: right;
     color: black;
 }
 .btn-edit:hover{
     color: rgb(33, 219, 33);
+}
+.btn-delete:hover{
+    color: red;
 }

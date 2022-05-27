@@ -1,7 +1,13 @@
-<a href="#" class="btn-edit"><fa-icon [icon]="faPencil"></fa-icon></a>
+<button *ngIf="log==true" class="btn-delete" (click)="deleteProject(project.id)"><fa-icon [icon]="delete"></fa-icon></button>
+<button *ngIf="log==true" class="btn-edit" (click)="update.showModal(project)"><fa-icon [icon]="faPencil"></fa-icon></button>
 <div class="card">
-    <img *ngIf="project.urlImg !== null && project.urlImg !== ''" [src]="project.urlImg" alt={{project.name}}>
+    <div class="img-project">
+        <img *ngIf="project.urlImg !== null && project.urlImg !== ''" [src]="project.urlImg" alt={{project.name}}>
+    </div>
     <h3>{{project.name}}</h3>
     <p>{{project.description}}</p>
     <a [href]="project.urlGit"><fa-icon [icon]="github"></fa-icon></a>
 </div>
+
+<!-- MODAL UPDATE -->
+<app-update-project #update (updated)="refreshData($event)"></app-update-project>

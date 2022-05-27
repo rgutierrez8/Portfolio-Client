@@ -3,6 +3,6 @@
     <img class="myBanner" [src]="myBanner">
     <div class="right-side">
         <app-social-networks></app-social-networks>
-        <app-button></app-button>
+        <app-button [log]="log" (logout)="setLog($event)"></app-button>
     </div>
 </header>

@@ -1,6 +1,12 @@
-<img *ngIf="ed.urlImg !== null" [src]="ed.urlImg">
-    <button class="btn-edit"><fa-icon [icon]="faPen"></fa-icon></button>
-    <div class="education-description">
-        <p><span>{{ed.institution}}</span> ({{ed.dateEnd}})</p>
-        <p class="description">{{ed.description}}</p>
-    </div>
+<div class="institution-logo">
+    <img *ngIf="ed.urlImg !== null" [src]="ed.urlImg">
+</div>
+<button *ngIf="log==true" class="btn-delete" (click)="deleteEducation(ed.id)"><fa-icon [icon]="delete"></fa-icon></button>
+<button *ngIf="log==true" class="btn-edit" (click)="updateEducation.showModal(ed)"><fa-icon [icon]="faPen"></fa-icon></button>
+<div class="education-description">
+    <p><span>{{ed.institution}}</span> ({{ed.dateEnd}})</p>
+    <p class="description">{{ed.description}}</p>
+</div>
+
+<!--MODAL UPDATE-->
+<app-update-education #updateEducation (updated)="refreshData($event)"></app-update-education>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faChrome } from '@fortawesome/free-brands-svg-icons';
 import { faPencil, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioService } from 'src/app/services/portfolio.service';
@@ -11,6 +11,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 
 export class SkillsComponent implements OnInit {
 
+  @Input() log: any;
   faPlus = faPlus;
   faPencil = faPencil;
   skills: any = [];
@@ -22,5 +23,9 @@ export class SkillsComponent implements OnInit {
     this.portfolioService.getSkills().subscribe(data => {
       this.skills = data;
     })
+  }
+
+  refreshData(data: any) {
+    this.skills = data;
   }
 }

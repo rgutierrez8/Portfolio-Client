@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
@@ -10,6 +10,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class PersonalDataComponent implements OnInit {
 
+  @Input() log: any;
   practiaLogo: String = "https://argentina.practia.global/wp-content/uploads/2021/01/logo-practia-original.svg";
   faPen = faPen;
   personalData: any = [];

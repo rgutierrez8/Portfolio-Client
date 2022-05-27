@@ -1,0 +1,43 @@
+<ng-template #updateModalExperience  let-modal>
+    <form [formGroup]="form" class="form-update" (ngSubmit)="onSubmit($event)">
+        <h3>Actualizar Experiencia</h3>
+        <div class="m-3">
+            <label for="id" class="form-label">ID</label>
+            <input type="text" formControlName="id" class="form-control" id="id" readonly>
+        </div>
+        <div class="m-3">
+            <label for="company" class="form-label">Empresa</label>
+            <input type="text" formControlName="company" class="form-control" id="company"
+            [ngClass]="{'is-invalid': Company?.errors && Company?.touched, 'is-valid': !Company?.errors && Company?.touched}">
+            <div *ngIf="Company?.errors && Company?.touched">
+                <p *ngIf="Company?.hasError('required')" class="text-danger">
+                    El nombre de la empresa es requerido
+                </p>
+            </div>
+        </div>
+        <div class="m-3">
+            <label for="description" class="form-label">Descripción</label>
+            <input type="text" formControlName="description" class="form-control" id="description"
+            [ngClass]="{'is-invalid': Description?.errors && Description?.touched, 'is-valid': !Description?.errors && Description?.touched}">
+        </div>
+        <div class="m-3">
+            <label for="dateStart" class="form-label">Fecha de comienzo</label>
+            <input type="text" formControlName="dateStart" class="form-control" id="dateStart"
+            [ngClass]="{'is-invalid': dateStart?.errors && dateStart?.touched, 'is-valid': !dateStart?.errors && dateStart?.touched}">
+        </div>
+        <div class="m-3">
+            <label for="dateEnd" class="form-label">Fecha de fin</label>
+            <input type="text" formControlName="dateEnd" class="form-control" id="dateEnd"
+            [ngClass]="{'is-invalid': dateEnd?.errors && dateEnd?.touched, 'is-valid': !dateEnd?.errors && dateEnd?.touched}">
+        </div>
+        <div class="m-3">
+            <label for="urlImg" class="form-label">URL Imágen</label>
+            <input type="text" formControlName="urlImg" class="form-control" id="urlImg"
+            [ngClass]="{'is-invalid': urlImg?.errors && urlImg?.touched, 'is-valid': !urlImg?.errors && urlImg?.touched}">
+        </div>
+        <div class="buttons">
+            <button class="btn btn-danger">Cancelar</button>
+            <button *ngIf="!Company?.errors" class="btn btn-success">Actualizar</button>
+        </div>
+    </form>
+</ng-template>

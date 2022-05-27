@@ -24,6 +24,14 @@ import { EducationCardComponent } from './components/education/education-card/ed
 import { ExperienceCardComponent } from './components/experience/experience-card/experience-card.component';
 import { SkillCardComponent } from './components/skills/skill-card/skill-card.component';
 import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
+import { UpdateComponent } from './components/experience/update/update.component';
+import { AddExperienceComponent } from './components/experience/add-experience/add-experience.component';
+import { UpdateEducationComponent } from './components/education/update-education/update-education.component';
+import { AddEducationComponent } from './components/education/add-education/add-education.component';
+import { AddSkillComponent } from './components/skills/add-skill/add-skill.component';
+import { UpdateSkillComponent } from './components/skills/update-skill/update-skill.component';
+import { AddProjectComponent } from './components/projects/add-project/add-project.component';
+import { UpdateProjectComponent } from './components/projects/update-project/update-project.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +50,15 @@ import { ProjectCardComponent } from './components/projects/project-card/project
     EducationCardComponent,
     ExperienceCardComponent,
     SkillCardComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    UpdateComponent,
+    AddExperienceComponent,
+    UpdateEducationComponent,
+    AddEducationComponent,
+    AddSkillComponent,
+    UpdateSkillComponent,
+    AddProjectComponent,
+    UpdateProjectComponent
   ],
   imports: [
     BrowserModule,

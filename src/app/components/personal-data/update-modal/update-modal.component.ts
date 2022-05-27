@@ -10,7 +10,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class UpdateModalComponent implements OnInit {
 
-  @ViewChild('updateModal', { static: false }) contenidoDelModal: any;
+  @ViewChild('updateModal', { static: false }) modalContent: any;
   @Output() updateData = new EventEmitter();
 
   form: FormGroup;
@@ -35,7 +35,7 @@ export class UpdateModalComponent implements OnInit {
   }
 
   showModal(user: any) {
-    this.modal.open(this.contenidoDelModal, { size: 'md', centered: true });
+    this.modal.open(this.modalContent, { size: 'md', centered: true });
     
     this.form = this.formBuilder.group({
       name: [user.name, [Validators.required]],
@@ -58,7 +58,7 @@ export class UpdateModalComponent implements OnInit {
       this.updateData.emit(data);
     });
 
-    this.modal.dismissAll(this.contenidoDelModal);
+    this.modal.dismissAll(this.modalContent);
   }
 
   get Name() {

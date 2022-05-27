@@ -1,9 +1,13 @@
 <div class="experience">
     <div class="title">
         <h3>Experiencia</h3>
-        <a href="#" class="btn-add"><fa-icon [icon]="faPlus"></fa-icon></a>
+        <button *ngIf="log==true" class="btn-add" (click)="addExperienceModal.showModal()"><fa-icon [icon]="faPlus"></fa-icon></button>
     </div>
     <div *ngFor="let job of experience" class="card-job">
-        <app-experience-card [job]="job"></app-experience-card>
+        <app-experience-card [job]="job" (deleted)="getData($event)" [log]="log"></app-experience-card>
     </div>
 </div>
+
+
+<!--MODAL AGREGAR ITEM-->
+<app-add-experience #addExperienceModal (addDataExperience)="refreshData($event)"></app-add-experience>

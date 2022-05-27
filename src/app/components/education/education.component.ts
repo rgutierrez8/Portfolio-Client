@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
@@ -9,6 +9,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class EducationComponent implements OnInit {
 
+  @Input() log: any;
   faPlus = faPlus;
   education: any;
 
@@ -20,4 +21,11 @@ export class EducationComponent implements OnInit {
     })
   }
 
+  getData(data: any) {
+    this.education = data;
+  }
+
+  refreshData(data: any) {
+    this.education = data;
+  }
 }

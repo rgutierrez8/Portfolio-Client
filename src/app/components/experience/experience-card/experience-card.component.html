@@ -1,7 +1,14 @@
-<a href="#" class="btn-edit"><fa-icon [icon]="faPen"></fa-icon></a>
-<img *ngIf="job.urlImg !== null" [src]="job.urlImg">
+<button *ngIf="log==true" class="btn-delete" (click)="deleteData(job.id)"><fa-icon [icon]="delete"></fa-icon></button>
+<button *ngIf="log==true" class="btn-edit"><fa-icon [icon]="faPen" (click)="update.showModal(job)"></fa-icon></button>
+<div class="company-logo">
+    <img *ngIf="job.urlImg !== null" [src]="job.urlImg">
+</div>
 <!--<img *ngIf="job.urlImg === null || job.urlImg == ''" src="../../../assets/images/developer.png">-->
     <div class="job-description">
         <p><span>{{job.company}}</span> ({{job.dateStart}} - {{job.dateEnd}})</p>
         <p class="description">{{job.description}}</p>
     </div>
+
+
+<!--MODAL UPDATE-->
+<app-update #update (updateDataExperience)="refreshData($event)"></app-update>

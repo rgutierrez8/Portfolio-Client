@@ -8,10 +8,7 @@
             [ngClass]="{'is-invalid': Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
             <div *ngIf="Username?.errors && Username?.touched">
                 <p *ngIf="Username?.hasError('required')" class="text-danger">
-                    El email es requerido
-                </p>
-                <p *ngIf="Username?.hasError('email')" class="text-danger">
-                    El formato del email es incorrecto
+                    El usuario es requerido
                 </p>
             </div>
         </div>
@@ -24,10 +21,13 @@
                     La contraseña es requerida
                 </p>
                 <p *ngIf="Password?.hasError('minlength')" class="text-danger">
-                    El formato del email es incorrecto
+                    El formato de la contraseña es incorrecto
                 </p>
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Ingresar</button>
+        <p *ngIf="errorAuth==true" class="text-danger textError">
+            DATOS INCORRECTOS
+        </p>
     </form>
 </div>

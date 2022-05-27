@@ -1,3 +1,16 @@
+.institution-logo{
+    margin: auto 10px;
+    display: inline-block;
+    width: 150px;
+    max-height: 220px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+img{
+    width: 100%;
+    object-fit: contain;
+}
+
 .education-description{
     display: inline-block;
     margin: 30px;
@@ -17,11 +30,14 @@
     font-weight: 700;
 }
 
-.btn-edit{
+.btn-edit, .btn-delete{
     border: none;
     background: none;
     float: right;
 }
 .btn-edit:hover{
     color: rgb(33, 219, 33);
+}
+.btn-delete:hover{
+    color: red;
 }

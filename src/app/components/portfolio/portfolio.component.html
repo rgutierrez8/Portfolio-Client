@@ -1,6 +1,6 @@
-<app-header></app-header>
-<app-personal-data></app-personal-data>
-<app-experience></app-experience>
-<app-education></app-education>
-<app-skills></app-skills>
-<app-projects></app-projects>
+<app-header [log]="logged"  (logout)="setLog($event)"></app-header>
+<app-personal-data [log]="logged"></app-personal-data>
+<app-experience [log]="logged"></app-experience>
+<app-education [log]="logged"></app-education>
+<app-skills [log]="logged"></app-skills>
+<app-projects [log]="logged"></app-projects>

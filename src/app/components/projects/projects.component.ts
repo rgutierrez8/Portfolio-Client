@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
@@ -9,6 +9,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class ProjectsComponent implements OnInit {
 
+  @Input() log: any;
   faPlus = faPlus;
 
   projects: any = [];
@@ -19,6 +20,10 @@ export class ProjectsComponent implements OnInit {
     this.portfolioService.getProjects().subscribe(data => {
       this.projects = data;
     })
+  }
+
+  refreshData(data: any) {
+    this.projects = data;
   }
 
 }

@@ -1,11 +1,2 @@
-<button *ngIf="logged==false" type="button" class="btn btn-success">Login</button>
-<button *ngIf="logged==true" type="button" class="btn btn-danger">Logout</button>
-
-<!--<ng-template #loginModal let-modal>
-    <div class="modal-header">
-        <h4 class="modal-title">Iniciar sesión</h4>
-        <button type="button" aria-label="close" class="close" (click) = "modal.dismiss()">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-</ng-template>-->
+<button *ngIf="log==false" type="button" class="btn btn-success" (click)="goLogin()">Login</button>
+<button *ngIf="log==true" type="button" class="btn btn-danger" (click)="goLogout()">Logout</button>

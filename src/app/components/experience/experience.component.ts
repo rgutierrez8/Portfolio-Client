@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faPen, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
@@ -12,6 +12,7 @@ export class ExperienceComponent implements OnInit {
   faPen = faPen;
   faPlus = faPlus;
   experience: any;
+  @Input() log: any
 
   constructor(private portfolioService: PortfolioService) { }
 
@@ -19,6 +20,14 @@ export class ExperienceComponent implements OnInit {
     this.portfolioService.getExperience().subscribe(data => {
       this.experience = data;
     })
+  }
+
+  refreshData(data: any) {
+    this.experience = data;
+  }
+
+  getData(data: any) {
+    this.experience = data;
   }
 
 }

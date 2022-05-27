@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { faPencil } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { faPencil, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
   selector: 'app-skill-card',
@@ -9,15 +10,30 @@ import { faPencil } from '@fortawesome/free-solid-svg-icons';
 export class SkillCardComponent implements OnInit {
 
   faPencil = faPencil;
+  delete = faXmark;
   @Input() skill: any;
   @Input() skills: any;
+  @Input() log: any;
+  @Output() deleted = new EventEmitter();
+  @Output() updated = new EventEmitter();
 
-  constructor() { }
+  constructor(private portfolioServer: PortfolioService) { }
 
   ngOnInit(): void {
     this.showAverages();
   }
   
+  refreshData(data: any) {
+    this.updated.emit(data);
+  }
+
+  deleteSkill(id: any) {
+    this.portfolioServer.deleteSkill(id).subscribe(data => {
+      this.deleted.emit(data);
+    })
+  }
+
+
   showAverages() {
     const fills = Array.from(document.getElementsByClassName("fill f"));
     const fulls = Array.from(document.getElementsByClassName("mask full"));

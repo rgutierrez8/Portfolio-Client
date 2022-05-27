@@ -26,4 +26,8 @@ export class AuthService {
   get AuthUser() {
     return this.currentUserSubject.value;
   }
+
+  logout() {
+    this.currentUserSubject.next("");
+  }
 }

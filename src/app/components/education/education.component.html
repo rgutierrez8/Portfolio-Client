@@ -1,9 +1,12 @@
 <div class="education">
     <div class="title">
         <h3>Educación</h3>
-        <button class="btn-add"><fa-icon [icon]="faPlus"></fa-icon></button>
+        <button *ngIf="log==true" class="btn-add" (click)="addEducation.showModal()"><fa-icon [icon]="faPlus"></fa-icon></button>
     </div>
     <div *ngFor="let ed of education" class="card-education">
-        <app-education-card [ed]="ed"></app-education-card>
+        <app-education-card [log]="log" [ed]="ed" (deleted)="getData($event)"></app-education-card>
     </div>
 </div>
+
+<!--MODAL ADD-->
+<app-add-education #addEducation (addNewEducation)="refreshData($event)"></app-add-education>

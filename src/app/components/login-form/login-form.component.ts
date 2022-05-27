@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginFormComponent implements OnInit {
 
   form: FormGroup;
+  errorAuth: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private auth: AuthService, private route: Router) { 
     this.form = this.formBuilder.group({
@@ -34,7 +35,10 @@ export class LoginFormComponent implements OnInit {
     event.preventDefault;
     this.auth.login(this.form.value).subscribe(data => {
       this.route.navigate(['/portfolio']);
+      return;
     })
+
+    this.errorAuth = true;
   }
 
 }

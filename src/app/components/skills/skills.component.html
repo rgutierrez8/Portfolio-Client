@@ -1,11 +1,14 @@
 <div class="skills">
     <div class="title">
         <h3>Skills</h3>
-        <button class="btn-add"><fa-icon [icon]="faPlus"></fa-icon></button>
+        <button *ngIf="log==true" class="btn-add" (click)="addSkill.showModal()"><fa-icon [icon]="faPlus"></fa-icon></button>
     </div>
     <div class="cards">
         <div *ngFor="let skill of skills" class="skill-card" id="skill-card">
-            <app-skill-card [skill]="skill" [skills]="skills"></app-skill-card>
+            <app-skill-card [log]="log" [skill]="skill" [skills]="skills" (deleted)="refreshData($event)" (updated)="refreshData($event)"></app-skill-card>
         </div>
     </div>
 </div>
+
+<!--=========================== MODAL ADD ======================================-->
+<app-add-skill #addSkill (addSkill)="refreshData($event)"></app-add-skill>
