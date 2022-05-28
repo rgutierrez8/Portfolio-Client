@@ -1,11 +1,11 @@
 .social-networks{
-    display: inline-block;
-    margin: 0 25px;
+    width: 45%;
+    display: flex;
+    float: left;
 }
 
 a{
-    display: inline-block;
-    margin: 10px;
+    margin: 0 7px;
     font-size: 30px;
     color: white;
 }

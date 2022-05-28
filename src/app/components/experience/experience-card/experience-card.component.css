@@ -1,7 +1,12 @@
+.interior-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
 .company-logo{
     margin: auto 10px;
     display: inline-block;
-    width: 150px;
     max-height: 220px;
     overflow: hidden;
     vertical-align: middle;
@@ -12,10 +17,10 @@ img{
 }
 
 .job-description{
+    align-items: center;
     display: inline-block;
-    margin: 30px;
-    width: 50%;
     vertical-align: middle;
+    margin-right: 10px;
 }
 
 .job-description p{

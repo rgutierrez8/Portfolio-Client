@@ -18,7 +18,8 @@ h3{
 
 .skills{
     background: rgb(197, 197, 197);
-    margin: 20px 30px;
+    width: 90%;
+    margin: 20px auto;
     padding: 30px;
     border-radius: 25px;
     overflow: hidden;

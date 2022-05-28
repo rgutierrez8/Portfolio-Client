@@ -1,9 +1,9 @@
-<div class="education">
+<div class="education col-sm-12">
     <div class="title">
         <h3>Educación</h3>
         <button *ngIf="log==true" class="btn-add" (click)="addEducation.showModal()"><fa-icon [icon]="faPlus"></fa-icon></button>
     </div>
-    <div *ngFor="let ed of education" class="card-education">
+    <div *ngFor="let ed of education" class="card-education col-sm-10 col-md-8 col-lg-6">
         <app-education-card [log]="log" [ed]="ed" (deleted)="getData($event)"></app-education-card>
     </div>
 </div>

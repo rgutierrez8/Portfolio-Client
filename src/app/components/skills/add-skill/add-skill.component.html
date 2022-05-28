@@ -1,4 +1,4 @@
-<ng-template #addSkillModal  let-modal>
+<ng-template #addSkillModal  let-modal class="add">
     <form [formGroup]="form" class="form-update" (ngSubmit)="onSubmit($event)">
         <h3> Agregar Skill</h3>
         <div class="m-3">
@@ -31,7 +31,7 @@
         </div>
         <div class="buttons">
             <button class="btn btn-danger">Cancelar</button>
-            <button *ngIf="!Name?.errors && !Average?.errors" class="btn btn-success">Actualizar</button>
+            <button *ngIf="!Name?.errors && !Average?.errors" class="btn btn-success">Agregar</button>
         </div>
     </form>
 </ng-template>

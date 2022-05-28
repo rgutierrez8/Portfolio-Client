@@ -1,8 +1,8 @@
 <header>
     <img [src]="logoAP" >
     <img class="myBanner" [src]="myBanner">
-    <div class="right-side">
-        <app-social-networks></app-social-networks>
+    <div class="right-side col-sm-12 col-md-6 col-xl-3">
+        <app-social-networks class="col-xl-6"></app-social-networks>
         <app-button [log]="log" (logout)="setLog($event)"></app-button>
     </div>
 </header>

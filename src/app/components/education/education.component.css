@@ -1,6 +1,7 @@
 .education{
     background: rgb(197, 197, 197);
-    margin: 10px 30px;
+    width: 90%;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 25px;
     overflow: hidden;
@@ -14,10 +15,10 @@ h3{
 
 .card-education{
     background: rgb(156, 156, 156);
-    margin: 20px auto;
-    padding: 30px;
-    width: 60%;
+    margin: 10px auto;
+    padding: 10px 20px;
     border-radius: 15px;
+    align-items: center;
 }
 
 .card-education img{

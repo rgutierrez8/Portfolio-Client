@@ -1,7 +1,8 @@
 .experience{
+    width: 90%;
     background: rgb(197, 197, 197);
-    margin: 20px 30px;
-    padding: 30px;
+    margin: 20px auto;
+    padding: 20px auto;
     border-radius: 25px;
     overflow: hidden;
     color: black;
@@ -24,8 +25,8 @@ h3{
 
 .card-job{
     background: rgb(156, 156, 156);
-    margin: 10px auto;
-    padding: 20px;
-    width: 60%;
+    margin: 20px auto;
+    padding: 10px 20px;
     border-radius: 15px;
+    align-items: center;
 }

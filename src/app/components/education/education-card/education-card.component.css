@@ -1,8 +1,12 @@
+.interior-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
 .institution-logo{
-    margin: auto 10px;
     display: inline-block;
-    width: 150px;
-    max-height: 220px;
     overflow: hidden;
     vertical-align: middle;
 }
@@ -12,9 +16,8 @@ img{
 }
 
 .education-description{
+    margin-top: 10px; 
     display: inline-block;
-    margin: 30px;
-    width: 70%;
     vertical-align: middle;
 }
 
