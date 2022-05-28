@@ -8,7 +8,8 @@ import { map } from 'rxjs/operators';
 })
 export class PortfolioService {
 
-  url: String = "http://localhost:8080/";
+  //url: String = "http://localhost:8080/";
+  url: String = "https://portfolioarpro.herokuapp.com/";
   
   constructor(private http: HttpClient) { }
 
