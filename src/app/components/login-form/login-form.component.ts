@@ -34,11 +34,15 @@ export class LoginFormComponent implements OnInit {
   onSubmit(event: Event) {
     event.preventDefault;
     this.auth.login(this.form.value).subscribe(data => {
-      this.route.navigate(['/portfolio']);
-      return;
+      if (data) {
+        this.route.navigate(['/portfolio']);
+      }
+      else {
+        this.errorAuth = true;
+      }
     })
 
-    this.errorAuth = true;
+    
   }
 
 }
